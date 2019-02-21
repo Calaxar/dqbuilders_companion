@@ -19,6 +19,12 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^0.1.2
+  flutter_launcher_icons: ^0.7.0
+
+flutter_icons:
+  android: true
+  ios: true
+  image_path: "assets/icon/ic_launcher.png"
 
 dev_dependencies:
   flutter_test:
@@ -46,7 +52,6 @@ flutter:
     - assets/sand.jpg
     - assets/swamp.jpg
     - assets/buildingblocks.jpg
-    - assets/blueprint.png
     - assets/buildingmaterials.png
     - assets/craftingstation.png
     - assets/armour.png
@@ -57,7 +62,9 @@ flutter:
     - assets/materials.png
     - assets/weapon.png
     - assets/gamePic.jpg
-    - assets/house.jpg
+    - assets/house.png
+    - assets/card.png
+    - assets/dqblogo.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.io/assets-and-images/#resolution-aware.

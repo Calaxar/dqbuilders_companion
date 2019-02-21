@@ -12,9 +12,10 @@ final furnitureColor = Colors.pink;
 final craftingStationColor = Colors.grey.shade800;
 final weaponToolColor = Colors.deepOrange;
 final armourColor = Colors.lightBlue.shade700;
+final otherColor = Colors.lime.shade700;
 final roomColor = Colors.indigo.shade700;
 
-enum ObjectType {items, food, light_source, materials, building_materials, furniture, crafting_station, weapon_tool, armour}
+enum ObjectType {items, food, light_source, materials, building_materials, furniture, crafting_station, weapon_tool, armour, other, room}
 
 class Workstation {
 	static const TREE = "Tree stump";
@@ -23,6 +24,7 @@ class Workstation {
 	static const HERBALIST = "Herbalist\'s cauldron";
 	static const SEWING = "Sewing station";
 	static const MINER = "Miner\'s refiner";
+	static const BUILDER = "Builder\'s workbench";
 	static const WELDER = "Welder\'s workbench";
 	static const COOKFIRE = "Cookfire";
 	static const BRICK = "Brick barbecue";
@@ -31,9 +33,14 @@ class Workstation {
 	static const TRANSMUTATION = "Transmutation table";
 	static const DIVINER = "Diviner\'s altar";
 	static const ANCIENT = "Ancient altar";
+	static const MACHINIST = "Machinist\'s workbench";
+	static const FORBIDDEN = "Forbidden altar";
+	static const DQ_GAME_PAK = "Dragon Quest Game Pak";
 }
 
 class Ingredient {
+	static const FLOAT_O_COPPER = "Float-o-copper";
+	static const KEYSTONE = "Keystone";
 	static const TARNISHED_TOKEN = "Tarnished token";
 	static const ORICHALCUM = "Orichalcum";
 	static const STEEL_INGOT = "Steel ingot";
@@ -74,6 +81,14 @@ class Ingredient {
 	static const CLAY = "Clay";
 	static const BRICK_WALL = "Brick wall";
 	static const STONE_WALL = "Stone wall";
+	static const WOODEN_WALL = "Wooden wall";
+	static const WOODEN_FLOOR = "Wooden floor";
+	static const CASTLE_WALL = "Castle wall";
+	static const CASTLE_TILE = "Castle tile";
+	static const TIMBERED_WALL = "Timbered wall";
+	static const RED_CARPET = "Red carpet";
+	static const PURPLE_FLAGSTONE = "Purple flagstone";
+	static const BLUE_FLAGSTONE = "Blue flagstone";
 	static const FLAGSTONE = "Flagstone";
 	static const MAGIC_DYE = "Magic dye";
 	static const FUR = "Fur";
@@ -88,6 +103,120 @@ class Ingredient {
 	static const SCORPION_HORN = "Scorpion horn";
 	static const FINEST_FUR = "Finest fur";
 	static const SILVER = "Silver";
+	static const PURE_WATER = "Pure water";
+	static const BONES = "Bones";
+	static const FREEZIA_FLOWER = "Freezia flower";
+	static const STICKY_LIQUID = "Sticky liquid";
+	static const PINK_PETALS = "Pink petals";
+	static const CONFUSING_CLAW = "Confusing claw";
+	static const FROGSTOOL = "Frogstool";
+	static const YELLOW_PETALS = "Yellow petals";
+	static const PARALYSTINGER = "Paralystinger";
+	static const COD = "Cod";
+	static const HOLY_WATER = "Holy water";
+	static const SCARE_ROOT = "Scare root";
+	static const PRICKLY_PEACH = "Prickly peach";
+	static const PUMICE_PIECES = "Pumice pieces";
+	static const LIQUID_SILVER = "Liquid silver";
+	static const RUSTY_NUGGETS = "Rusty nuggets";
+	static const VULCOVOLTAIC_MOTOR = "Vulcovoltaic magimotor";
+	static const MAGIC_INGOT = "Magic ingot";
+	static const THERMOBATTERY = "Thermobattery";
+	static const LAVA = "Lava";
+	static const ICE = "Ice";
+	static const WATER = "Water";
+	static const SIZZ_SHOT = "Sizz shot";
+	static const CRACK_SHOT = "Crack shot";
+	static const CANNON = "Cannon";
+	static const HEARTFRUIT = "Heartfruit";
+	static const SUGARCANE = "Sugarcane";
+	static const POTATO = "Potato";
+	static const HOLYHOCK = "Holyhock";
+	static const SQUID = "Squid";
+	static const SARDINE = "Sardine";
+	static const FROG = "Frog";
+	static const HOT_WATER = "Hot water";
+	static const CACTUS_CUTLET = "Cactus cutlet";
+	static const HARELOIN_STEAK = "Hareloin steak";
+	static const CHILLI_PEPPERS = "Chilli peppers";
+	static const MEATY_BONE = "Meaty bone";
+	static const COOKED_CRAB_CLAW = "Cooked crab claw";
+	static const CRAB_CLAW = "Crab claw";
+	static const SALMON = "Salmon";
+	static const RED_SNAPPER = "Red snapper";
+	static const TUNA = "Tuna";
+	static const NEWT = "Newt";
+	static const BIGONIA_LEAF = "Bigonia leaf";
+	static const DRACKY_BUTTER = "Dracky butter";
+	static const SNOW = "Snow";
+	static const SLUDGESTONE = "Sludgestone";
+	static const RUBY = "Ruby";
+	static const SILVERY_SLUDGE = "Silvery sludge";
+	static const GOLD = "Gold";
+	static const PALM_LUMBER = "Palm lumber";
+	static const CEDAR_LUMBER = "Cedar lumber";
+	static const FIBROUS_FROND = "Fibrous frond";
+	static const CURIOUS_CONTRAPTION = "Curious contraption";
+	static const POWER_CRYSTAL = "Power crystal";
+	static const MYTHRIL = "Mythril";
+	static const MECHROCHIP = "Mechrochip";
+	static const FLAME_ORB = "Flame orb";
+	static const FROST_ORB = "Frost orb";
+	static const SEPTIC_SHRUB = "Septic shrub";
+	static const SHOT_SILK = "Shot silk";
+	static const SPRING = "Spring";
+	static const PIXEL = "Pixel";
+	static const COTTON = "Cotton";
+	static const DRAGON_BONES = "Dragon bones";
+	static const BOOK = "Book";
+	static const ARMOURERS_SIGN = "Armourer\'s sign";
+	static const BOTTLES = "Bottles";
+	static const WHOPPING_NEEDLE = "Whopping needle";
+	static const SLIME_SKIN = "Slime skin";
+	static const POWIE_YOWIE_FUR = "Powie yowie fur";
+	static const HOT_WATER_CRYSTAL = "Hot water crystal";
+	static const SEARING_STEAK = "Searing steak";
+	static const SAILORS_STEW = "Sailor\'s stew";
+	static const HEARTY_CREAM_CAKE = "Hearty cream cake";
+	static const ZENITHIUM = "Zenithium";
+	static const HERBALISTS_CAULDRON = "Herbalist\'s cauldron";
+	static const FIBROUS_FABRIC = "Fibrous fabric";
+	static const SAPPHIRE = "Sapphire";
+	static const BEWAREWOLF_PELT = "Bewarewolf pelt";
+	static const FACE_GUARD_FRAGMENT = "Face guard fragment";
+	static const CELESTIAL_SKEIN = "Celestial skein";
+	static const HUGE_HORN = "Huge horn";
+	static const ANTIDOTAL_HERB = "Antidotal herb";
+	static const TINGLE_TABLET = "Tingle tablet";
+	static const DEFUDDLE_DROPS = "Defuddle drops";
+	static const FRESH_FISH_FEAST = "Fresh fish feast";
+	static const BLANK_TICKET = "Blank ticket";
+	static const SLIMY_TUSSLE_TICKET = "Slimy tussle ticket";
+	static const FLATTENED_TUSSLE_TICKET = "Flattened tussle ticket";
+	static const POISONOUS_TUSSLE_TICKET = "Poisonous tussle ticket";
+	static const ROUGHED_UP_TUSSLE_TICKET = "Roughed-up tussle ticket";
+	static const TORRID_TUSSLE_TICKET = "Torrid tussle ticket";
+	static const MAGICAL_TUSSLE_TICKET = "Magical tussle ticket";
+	static const BLOODY_TUSSLE_TICKET = "Bloody tussle ticket";
+	static const DEMONIC_TUSSLE_TICKET = "Demonic tussle ticket";
+	static const SKELETAL_TROUBLE_TICKET = "Skeletal trouble ticket";
+	static const FEATHERY_TROUBLE_TICKET = "Feathery trouble ticket";
+	static const PRICKLY_TROUBLE_TICKET = "Prickly trouble ticket";
+	static const ROTTEN_TROUBLE_TICKET = "Rotten trouble ticket";
+	static const TRICKY_TROUBLE_TICKET = "Tricky trouble ticket";
+	static const METALLIC_TROUBLE_TICKET = "Metallic trouble ticket";
+	static const BALEFUL_TROUBLE_TICKET = "Baleful trouble ticket";
+	static const DEADLY_TROUBLE_TICKET = "Deadly trouble ticket";
+	static const STORM_STONE = "Storm stone";
+	static const STRONG_STALKS = "Strong stalks";
+	static const CRACKED_CRYSTAL = "Cracked crystal";
+	static const BROKEN_LYRE = "Broken lyre";
+	static const LYRE_STRING = "Lyre string";
+	static const SANDGRASS = "Sandgrass";
+	static const PRISMATIC_CRYSTAL = "Prismatic crystal";
+	static const SUNSTONE = "Sunstone";
+	static const STAFF_OF_RAIN = "Staff of Rain";
+	static const ANCIENT_EMBLEM = "Ancient Emblem";
 
 	String _ingredientName;
 	int _quantity;
@@ -103,6 +232,13 @@ class Ingredient {
 }
 
 class Craftable {
+	static const ANCIENT_ALTAR = "Ancient altar";
+	static const ULTIMATE_KEY = "Ultimate key";
+	static const HORN_RIMMED_BUCKET = "Horn-rimmed bucket";
+	static const RAINBOW_DROP = "Rainbow drop";
+	static const LYRE_IRE = "Lyre of Ire";
+	static const DIVINE_DRAUGHT = "Divine draught";
+	static const SUNSTONE = "Sunstone";
 	static const ANCIENT_EMBLEM = "Ancient emblem";
 	static const HOLY_WATER = "Holy water";
 	static const SPRINGTIDE_SPRINKLES = "Springtide sprinkles";
@@ -320,7 +456,9 @@ class Craftable {
 	static const DINING_TABLE = "Dining table";
 	static const ROUND_TABLE = "Round table";
 	static const EXTRAVAGANT_TABLE = 'Extravagant table';
+	static const SMALL_TABLE = "Small table";
 	static const WOODEN_STOOL = 'Wooden stool';
+	static const COMFY_STOOL = "Comfy stool";
 	static const COMFY_SOFA = "Comfy sofa";
 	static const CHIC_CHAIR = 'Chic chair';
 	static const THRONE = 'Throne';
@@ -401,7 +539,7 @@ class Craftable {
 	static const HERBALISTS_CAULDRON = "Herbalist\'s cauldron";
 	static const SEWING_STATION = "Sewing station";
 	static const MINERS_REFINER = "Miner\'s refiner";
-	static const WELDERS_WORKBANCH = "Welder\'s workbench";
+	static const WELDERS_WORKBENCH = "Welder\'s workbench";
 	static const DIVINERS_ALTAR = "Diviner\'s altar";
 	static const COOKFIRE = "Cookfire";
 	static const BRICK_BARBECUE = "Brick barbecue";
@@ -498,6 +636,7 @@ class Craftable {
 	static const FURRY_FURY_TICKET = "Furry Fury ticket";
 	static const MAGER_LEAGUE_TICKET = "Mager League ticket";
 	static const BLACKENED_BLOOZE_TICKET = "Blackened Blooze ticket";
+	static const STAFF_OF_RAIN = "Staff of Rain";
 }
 
 class ObjectPage extends StatefulWidget {
@@ -511,9 +650,21 @@ class ObjectPage extends StatefulWidget {
 	final String effect;
 	final int score;
 
-
 	@override
 	_ObjectPageState createState() => _ObjectPageState();
+
+	@override
+	bool operator ==(other) {
+		if (other is ObjectPage) {
+			return identical(this.objectName, other.objectName);
+		}
+		return false;
+	}
+
+	@override
+	int get hashCode {
+		return objectName.hashCode * description.hashCode;
+	}
 }
 
 class _ObjectPageState extends State<ObjectPage> {
@@ -558,12 +709,20 @@ class _ObjectPageState extends State<ObjectPage> {
 				image = new AssetImage("assets/armour.png");
 				color = armourColor;
 				break;
+			case ObjectType.other:
+				image = new AssetImage("assets/card.png");
+				color = otherColor;
+				break;
+			case ObjectType.room:
+				image = new AssetImage("assets/house.png");
+				color = roomColor;
+				break;
 		}
 
 		List<Widget> renderList = new List();
 		renderList.add(
 			Container(
-				margin: EdgeInsets.all(10.0),
+				margin: EdgeInsets.all(12.0),
 				decoration: BoxDecoration(
 					color: Colors.white,
 					borderRadius: BorderRadius.circular(20.0),
@@ -580,8 +739,12 @@ class _ObjectPageState extends State<ObjectPage> {
 					borderRadius: BorderRadius.circular(5.0)
 				),
 				padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
-				margin: EdgeInsets.only(bottom: 3.0),
-				child: Text(widget.objectName, style: TextStyle(color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.w600),)
+				margin: EdgeInsets.only(bottom: 3.0, left: 10.0, right: 10.0),
+				child: Text(
+					widget.objectName,
+					style: TextStyle(color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.w600),
+					textAlign: TextAlign.center,
+				)
 			)
 		);
 		renderList.add(
@@ -617,6 +780,9 @@ class _ObjectPageState extends State<ObjectPage> {
 				Text("•" + i.ingredientName + " x" + i.quantity.toString() + "  ", style: Theme.of(context).textTheme.body1,)
 			);
 		}
+		ingredientWidgets.add(
+			Text("Station: " + widget.workstation, style: Theme.of(context).textTheme.body1,)
+		);
 		renderList.add(
 			blackTextBox(
 				Column(
@@ -782,15 +948,30 @@ class RoomComponent {
 }
 
 class RoomPage extends StatefulWidget {
-	RoomPage(this.objectName, this.description, this.components,this.effect,);
+	RoomPage(this.roomName, this.description, this.components,this.effect,);
 
-	final String objectName;
+	final String roomName;
 	final String description;
 	final List<RoomComponent> components;
 	final String effect;
 
 	@override
 	_RoomPageState createState() => _RoomPageState();
+
+	@override
+	bool operator ==(other) {
+		if (other is RoomPage) {
+			return identical(this.roomName, other.roomName);
+		}
+		return false;
+	}
+
+	@override
+	int get hashCode {
+		return roomName.hashCode * description.hashCode;
+	}
+
+
 }
 
 class _RoomPageState extends State<RoomPage> {
@@ -817,7 +998,7 @@ class _RoomPageState extends State<RoomPage> {
 				),
 				padding: EdgeInsets.symmetric(horizontal: 10.0, vertical: 3.0),
 				margin: EdgeInsets.only(bottom: 3.0),
-				child: Text(widget.objectName, style: TextStyle(color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.w600),)
+				child: Text(widget.roomName, style: TextStyle(color: Colors.white, fontSize: 28.0, fontWeight: FontWeight.w600),)
 			)
 		);
 		renderList.add(
@@ -872,7 +1053,7 @@ Widget blackTextBox(Column column) {
 		margin: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 4.0),
 		padding: const EdgeInsets.all(6.0),
 		decoration: const BoxDecoration(
-			color: Colors.black,
+			color: Colors.black87,
 			borderRadius: BorderRadius.all(Radius.circular(7.0)),
 			border: Border(
 				top: BorderSide(width: 4.0, color: Colors.white),
