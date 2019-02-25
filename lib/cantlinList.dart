@@ -30,6 +30,7 @@ class _CantlinListPageState extends State<CantlinListPage>
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
+		 resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         backgroundColor: Colors.green,
         title: Text(
@@ -1386,6 +1387,7 @@ class _CantlinListPageState extends State<CantlinListPage>
 		  } else {
 			  _searchBarController.reverse();
 			  _searchText = "";
+			  FocusScope.of(context).requestFocus(new FocusNode());
 		  }
 		  _searchBarShow = !_searchBarShow;
 	  });

@@ -29,6 +29,7 @@ class _KolGalenholmListPageState extends State<KolGalenholmListPage> with Single
 	@override
 	Widget build(BuildContext context) {
 		return new Scaffold(
+			resizeToAvoidBottomPadding: false,
 			appBar: AppBar(
 				backgroundColor: Colors.blueAccent,
 				title: Text("Kol & Galenholm", style: Theme.of(context).textTheme.title,),
@@ -1757,6 +1758,7 @@ class _KolGalenholmListPageState extends State<KolGalenholmListPage> with Single
 			} else {
 				_searchBarController.reverse();
 				_searchText = "";
+				FocusScope.of(context).requestFocus(new FocusNode());
 			}
 			_searchBarShow = !_searchBarShow;
 		});

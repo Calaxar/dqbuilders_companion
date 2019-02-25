@@ -30,6 +30,7 @@ class _RimuldarListPageState extends State<RimuldarListPage> with SingleTickerPr
 	@override
 	Widget build(BuildContext context) {
 		return new Scaffold(
+			resizeToAvoidBottomPadding: false,
 			appBar: AppBar(
 				backgroundColor: Colors.purple,
 				title: Text("Rimuldar", style: Theme.of(context).textTheme.title,),
@@ -1511,6 +1512,7 @@ class _RimuldarListPageState extends State<RimuldarListPage> with SingleTickerPr
 			} else {
 				_searchBarController.reverse();
 				_searchText = "";
+				FocusScope.of(context).requestFocus(new FocusNode());
 			}
 			_searchBarShow = !_searchBarShow;
 		});

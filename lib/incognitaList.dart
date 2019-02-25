@@ -34,6 +34,7 @@ class _IncognitaListPageState extends State<IncognitaListPage> with TickerProvid
 	@override
 	Widget build(BuildContext context) {
 		return new Scaffold(
+			resizeToAvoidBottomPadding: false,
 			appBar: AppBar(
 				backgroundColor: Colors.yellow.shade600,
 				title: Text("Terra Incognita", style: Theme.of(context).textTheme.title,),
@@ -5188,6 +5189,7 @@ class _IncognitaListPageState extends State<IncognitaListPage> with TickerProvid
 			} else {
 				_searchBarController.reverse();
 				_searchText = "";
+				FocusScope.of(context).requestFocus(new FocusNode());
 			}
 			_searchBarShow = !_searchBarShow;
 		});
